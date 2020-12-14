@@ -56,7 +56,7 @@ class AocInteraction:
                         f.write("from pull import AocInteraction\n\n\n#  https://adventofcode.com/" + str(
                             self.year) + "/day/" + str(day) + "\n")
                         lines = [i for i in parts[0].get_text().replace(" ---", " ---\n").split("\n") if i]
-                        f.write(str('\n'.join(map(lambda x: "#  " + x, lines))))
+                        # f.write(str('\n'.join(map(lambda x: "#  " + x, lines))))
                         f.write("""
 def part_1(advent_of_code):
     with open('input.txt', 'r') as input_file:
@@ -88,7 +88,7 @@ if __name__ == "__main__":
                                 old_split.insert(line_nr, prefix + (str('\n'.join(map(lambda x: "#  " + x, lines)))))
                                 break
                         f.seek(0)
-                        f.write("\n".join(old_split))
+                        # f.write("\n".join(old_split))
             elif main_response.text.startswith("Please don't repeatedly request this endpoint before it unlocks!"):
                 countdown_page = self.session.get('https://adventofcode.com/' + str(self.year))
                 countdown_f = regex_search("var server_eta = (\d+);", countdown_page.text)
