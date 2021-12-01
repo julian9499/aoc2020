@@ -4,7 +4,7 @@ letter = []
 word = []
 
 
-f = open("inputs/input_day2.txt", "r")
+f = open("../inputs/input_day2.txt", "r")
 for line in f:
     item = line.split(' ')
     rng = item[0].split('-')

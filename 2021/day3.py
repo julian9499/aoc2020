@@ -21,7 +21,7 @@ class Travel:
 
 map = []
 
-f = open("inputs/input_day3.txt", "r")
+f = open("../inputs/input_day3.txt", "r")
 for line in f:
     treeLine = []
     for coord in line.replace('\n', ''):

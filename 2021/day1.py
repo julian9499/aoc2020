@@ -1,5 +1,5 @@
 numberArr = []
-f = open("inputs/input_day1.txt", "r")
+f = open("../inputs/input_day1.txt", "r")
 for line in f:
     numberArr.append(int(line))
 
