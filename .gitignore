@@ -3,3 +3,4 @@ venv
 
 inputs/
 .session
+__pychache__

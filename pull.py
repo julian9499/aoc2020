@@ -17,7 +17,7 @@ class AocInteraction:
         with open(join(self.__location__, '.session'), 'r') as f:
             session_token = f.readline()
             if session_token:
-                self.year = 2021
+                self.year = 2022
                 self.hints = True
 
                 self.session = Session()
