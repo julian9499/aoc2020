@@ -45,7 +45,6 @@ def part_2(advent_of_code):
             counts.append(count)
         counts.sort()
 
-
         advent_of_code.answer(2, sum(counts[-3:]))
 
 
