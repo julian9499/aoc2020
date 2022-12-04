@@ -27,9 +27,10 @@ def part_2(advent_of_code):
         state = list(map(int, input_file.readline().strip().split(",")))
         newBigState = [] # USE DYNAMIC PROGRAMMING
         count = 0
+        mp = {}
         for i in state:
             # localstate = [i]
-            count += fish(256, 0, i)
+            count += fish(256, 0, i, mp)
             print(count)
             # print(count)
             # for x in range(0, 43):
@@ -62,10 +63,12 @@ def part_2(advent_of_code):
 
         advent_of_code.answer(2, count)
 
-def fish(days, init_time, initial_state):
-    if init_time + initial_state >= days:
+def fish(days, init_time, initial_state, mp):
+    if init_time + initial_state+1 > days:
         return 1
-    return fish(days, init_time+initial_state+1, 6) + fish(days, init_time+initial_state+1, 8)
+    if mp.get(init_time + initial_state + 1) is None:
+        mp[init_time + initial_state + 1] = fish(days, init_time+initial_state+1, 6, mp) + fish(days, init_time+initial_state+1, 8, mp)
+    return mp.get(init_time + initial_state + 1)
 
 
 if __name__ == "__main__":
