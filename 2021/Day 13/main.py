@@ -37,6 +37,7 @@ def part_1(advent_of_code):
                         found = True
                 if not found:
                     newPoints.append(newP)
+            print(len(newPoints))
             points = newPoints
         print(points)
         print(len(points))
