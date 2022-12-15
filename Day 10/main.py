@@ -53,9 +53,8 @@ def part_2(advent_of_code, file_as_string_array):
         print(str)
     advent_of_code.answer(2, "efuglpap")
 
-
 if __name__ == "__main__":
     aoc_interaction = AocInteraction()
     file_as_string_array = [x.strip() for x in open('input.txt', 'r').readlines()]
-    # part_1(aoc_interaction, file_as_string_array)
+    part_1(aoc_interaction, file_as_string_array)
     part_2(aoc_interaction, file_as_string_array)
