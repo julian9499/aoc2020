@@ -1,29 +1,15 @@
 from pull import AocInteraction
 
 
-class Pos:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
-    def __eq__(self, other):
-        return self.x == other.x and self.y == other.y
-
-    def __hash__(self):
-        return self.x * 10000000 + self.y
-
-
-#  https://adventofcode.com/2022/day/15
+#  https://adventofcode.com/2022/day/17
 
 def part_1(advent_of_code, file_as_string_array):
-    coll = []
-    for line in file_as_string_array:
-        line.replace(":", "").replace("x=", "").replace("y=", "").replace(",", "")
-
+    
     advent_of_code.answer(1, None)
 
 
 def part_2(advent_of_code, file_as_string_array):
+    
     advent_of_code.answer(2, None)
 
 
